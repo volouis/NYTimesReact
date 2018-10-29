@@ -1,28 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Jumbotron from './components/Jumbotron'
+import { Input, FormBtn } from './components/Form'
+import "./App.css"
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = () => (
+    <div className="content">
+      <Jumbotron/>
+      <div className="card border-secondary mb-3">
+        <div className="card-header bg-secondary text-white">
+          <div className="card-title">
+            Search Panel
+          </div>
+        </div>
+        <div className="card-body">
+          <Input/>
+          <Input/>
+          <Input/>
+          <FormBtn>Search</FormBtn>
+        </div>
+        
       </div>
-    );
-  }
-}
+      
+      <div className="card border-secondary mb-3">
+        <div className="card-header bg-secondary text-white">
+          <div className="card-title">
+            Top Article
+          </div>
+        </div>
+        <div className="card-body">
+        </div>
+        
+      </div>
+      
+
+      
+    </div>
+);
 
 export default App;
